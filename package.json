@@ -1,0 +1,23 @@
+{
+  "name": "odin-restaurant-page",
+  "version": "1.0.0",
+  "description": "Webpack practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CCMPacheco/odin-restaurant-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CCMPacheco/odin-restaurant-page/issues"
+  },
+  "homepage": "https://github.com/CCMPacheco/odin-restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
