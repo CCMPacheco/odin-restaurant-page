@@ -8,35 +8,28 @@ function createHeader() {
   restaurantName.textContent = `The Corner`;
 
   const nav = document.createElement("nav");
-  const ul = document.createElement("ul");
-  const homeIl = document.createElement("il");
-  const menuIl = document.createElement("il");
-  const contactIl = document.createElement("il");
 
-  const homeLink = document.createElement("a");
+  const homeLink = document.createElement("button");
   homeLink.textContent = `Home`;
-  homeLink.setAttribute(`[data-link]`);
-  homeLink.href = `#`;
+  homeLink.dataset.link = ``;
   homeLink.addEventListener("click", (e) => {
     if (e.target.classList.contains("active")) return;
     setActiveLink(homeLink);
     loadHome();
   });
 
-  const menuLink = document.createElement("a");
+  const menuLink = document.createElement("button");
   menuLink.textContent = `Menu`;
-  menuLink.setAttribute(`[data-link]`);
-  menuLink.href = `#`;
+  menuLink.dataset.link = ``;
   menuLink.addEventListener("click", (e) => {
     if (e.target.classList.contains("active")) return;
     setActiveLink(menuLink);
     loadMenu();
   });
 
-  const contactLink = document.createElement("a");
+  const contactLink = document.createElement("button");
   contactLink.textContent = `Contact`;
-  contactLink.setAttribute(`[data-link]`);
-  contactLink.href = `#`;
+  contactLink.dataset.link = ``;
   contactLink.addEventListener("click", (e) => {
     if (e.target.classList.contains("active")) return;
     setActiveLink(contactLink);
@@ -45,13 +38,9 @@ function createHeader() {
 
   header.appendChild(restaurantName);
   header.appendChild(nav);
-  nav.appendChild(ul);
-  ul.appendChild(homeIl);
-  ul.appendChild(menuIl);
-  ul.appendChild(contactIl);
-  homeIl.appendChild(homeLink);
-  menuIl.appendChild(menuLink);
-  contactIl.appendChild(contactLink);
+  nav.appendChild(homeLink);
+  nav.appendChild(menuLink);
+  nav.appendChild(contactLink);
 
   return header;
 }
@@ -85,9 +74,9 @@ function createFooter() {
 function initialize() {
   const content = document.getElementById("content");
 
-  content.appendChild(createHeader);
-  content.appendChild(createMain);
-  content.appendChild(createFooter);
+  content.appendChild(createHeader());
+  content.appendChild(createMain());
+  content.appendChild(createFooter());
 
   setActiveLink(document.querySelector("[data-link]"));
   loadHome();
