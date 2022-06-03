@@ -1,3 +1,5 @@
+import Map from "./assets/map.png";
+
 function createContact() {
   const contact = document.createElement("div");
   contact.classList.add("contact-container");
@@ -9,7 +11,7 @@ function createContact() {
   address.textContent = `🏠 - Intersection Laprida and Mendoza`;
 
   const restaurantLocation = document.createElement("img");
-  restaurantLocation.src = `../src/assets/map.png`;
+  restaurantLocation.src = Map;
   restaurantLocation.alt = `location on map`;
 
   contact.appendChild(phoneNumber);

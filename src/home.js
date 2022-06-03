@@ -1,9 +1,11 @@
+import Hero from "./assets/chef.jpg";
+
 function createHome() {
   const home = document.createElement("div");
   home.classList.add("hero-container");
 
   const hero = document.createElement("img");
-  hero.src = `../src/assets/chef.jpg`;
+  hero.src = Hero;
   hero.alt = `Roger, the head chef`;
   hero.classList.add("hero");
 

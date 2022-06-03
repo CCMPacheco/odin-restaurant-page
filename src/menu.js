@@ -1,3 +1,5 @@
+import Pizza from "./assets/pizza.png";
+
 function createMenu() {
   const menu = document.createElement("div");
   menu.classList.add("grid-container");
@@ -14,7 +16,7 @@ function createCard() {
   card.classList.add("card");
 
   const foodImage = document.createElement("img");
-  foodImage.src = `../src/assets/pizza.png`;
+  foodImage.src = Pizza;
   foodImage.alt = `pizza`;
 
   const foodTitle = document.createElement("h3");
